@@ -5,7 +5,7 @@ import List from '../List/List.js';
 
 class App extends React.Component {
   render() {
-    // const { imageSrc } = this.props;
+    //// const { imageSrc } = this.props;
 
     return (
       <main className={styles.component}>

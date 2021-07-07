@@ -7,29 +7,38 @@ import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 
 class List extends React.Component {
+  state = {
+    columns: this.props.columns || [],
+  }
+
   static propTypes = {
-    /* static meand that propTypes object is not available as this.propTypes for other instances and is saved as List.propTypes (class property) */
+    /* static means that propTypes object is not available as this.propTypes for other instances and is saved as List.propTypes (class property) */
     title: PropTypes.node.isRequired,
     description: PropTypes.node,
     columns: PropTypes.array,
   }
 
   static defaultProps = {
-    description: settings.defaultListDescription,
+    description: ReactHtmlParser(settings.defaultListDescription),
   }
 
   render() {
-    // const { title } = this.props;
+    //// const { columnTitle } = this.props;
     return (
       <section className={styles.component}>
-        <Hero titleText={this.props.title} imageSrc={this.props.image}/>
+        <Hero titleText={this.props.title} image={this.props.image}/>
         <div className={styles.description}>
           {ReactHtmlParser(this.props.description)}
         </div>
         <div className={styles.columns}>
-          <Column columnTitle='Weepingacorn' />
+
+          {this.state.columns.map(({ key, ...columnProps }) => (
+            <Column key={key} {...columnProps} />
+          ))}
+
+          {/* <Column columnTitle='Weepingacorn' />
           <Column columnTitle='Scorchnut' />
-          <Column columnTitle='Bitterleaf' />
+          <Column columnTitle='Bitterleaf' /> */}
         </div>
       </section>
     )
