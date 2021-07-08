@@ -13,7 +13,7 @@ class List extends React.Component {
   }
 
   static propTypes = {
-    /* static means that propTypes object is not available as this.propTypes for other instances and is saved as List.propTypes (class property) */
+    /* static => {object} propTypes cant be accessed as this.propTypes for other instances & is saved as List.propTypes (class property) */
     title: PropTypes.node.isRequired,
     description: PropTypes.node,
     columns: PropTypes.array,

@@ -5,8 +5,6 @@ import List from '../List/List';
 
 class App extends React.Component {
   render() {
-    //// const { imageSrc } = this.props;
-
     return (
       <main className={styles.component}>
         <h1 className={styles.title}>{pageContents.title}</h1>

@@ -11,8 +11,8 @@
 
 .columns {
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  justify-content: space-evenly; /* changed for prettier spread */
+  flex-wrap: wrap; /* added to maintain width of Column.component and accomodate for more of them */
   overflow: auto;
 }
 
