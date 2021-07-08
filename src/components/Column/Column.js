@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './Column.scss';
 import PropTypes from 'prop-types';
+import Icon from '../Icon/Icon';
+// import Creator from '../Creator/Creator';
 
 class Column extends React.Component {
   static propTypes = {
@@ -14,11 +16,7 @@ class Column extends React.Component {
     return (
       <section className={styles.component}>
         <h3 className={styles.title}>{this.props.title}</h3>
-        {/* <span className={styles.icon}>
-            <i className={'fas-fa-'+this.props.icon} />
-        </span> */}
-        {/* <i className={'fas-fa-'+this.props.icon}></i> */}
-        {/* <i className={styles.icon}>{this.props.icon}</i> */}
+        <span className={styles.icon}><Icon name={this.props.icon}/></span>
       </section>
     )
   }
