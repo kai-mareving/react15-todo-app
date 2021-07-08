@@ -18,6 +18,7 @@ class List extends React.Component {
     description: PropTypes.node,
     columns: PropTypes.array,
     image: PropTypes.string,
+    addColumn: PropTypes.func,
   }
 
   static defaultProps = {
