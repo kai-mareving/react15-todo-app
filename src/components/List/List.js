@@ -52,8 +52,8 @@ class List extends React.Component {
           </div>
 
           <div className={styles.columns}>
-            {this.state.columns.map(({ key, ...columnProps }) => (
-              <Column key={key} {...columnProps} />
+            {this.state.columns.map(({ key, ...columnProp }) => (
+              <Column key={key} {...columnProp} />
             ))}
           </div>
 

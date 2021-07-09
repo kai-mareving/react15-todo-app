@@ -39,7 +39,6 @@ class Column extends React.Component {
 
   render() {
     //> console.log(this.props);
-    // const { title, icon, cards, addCard } = this.props;
 
     return (
       <section className={styles.component}>
@@ -52,8 +51,8 @@ class Column extends React.Component {
         </h3>
 
         <div className={styles.cards}>
-          {this.state.cards.map(({key, ...cardProps}) => (
-            <Card key={key} {...cardProps} />
+          {this.state.cards.map(({key, ...cardProp}) => (
+            <Card key={key} {...cardProp} />
           ))}
         </div>
 
