@@ -1,4 +1,5 @@
 export const settings = {
+  listCreatorText: 'Add new list',
   columnCreatorText: 'Add new column',
   cardCreatorText: 'Add new card',
   creator: {
@@ -16,6 +17,7 @@ export const pageContents = {
 };
 
 export const listData = {
+  key: 0,
   title: 'Things to do <sup>soon!</sup>',
   description: 'Interesting things that inspire me!',
   image: 'https://i.imgur.com/VHFoGGO.jpg',
