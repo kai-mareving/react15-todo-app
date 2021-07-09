@@ -17,7 +17,7 @@ export const pageContents = {
 
 export const listData = {
   title: 'Things to do <sup>soon!</sup>',
-  description: 'Interesting things I want to check out!',
+  description: 'Interesting things that inspire me!',
   image: 'https://i.imgur.com/VHFoGGO.jpg',
   columns: [
     {
@@ -27,11 +27,11 @@ export const listData = {
       cards: [
         {
           key: 0,
-          title: 'This Is Going to Hurt',
+          title: 'Silence of the Lambs',
         },
         {
           key: 1,
-          title: 'Interpreter of Maladies',
+          title: 'Dune',
         },
       ],
     },
@@ -42,11 +42,11 @@ export const listData = {
       cards: [
         {
           key: 0,
-          title: 'Harry Potter',
+          title: 'American Beauty',
         },
         {
           key: 1,
-          title: 'Star Wars',
+          title: 'The Shawshank Redemption',
         },
       ],
     },
@@ -57,11 +57,11 @@ export const listData = {
       cards: [
         {
           key: 0,
-          title: 'The Witcher',
+          title: 'Guild Wars 2',
         },
         {
           key: 1,
-          title: 'Skyrim',
+          title: 'Sid Meiers Alpha Centauri',
         },
       ],
     },
