@@ -7,12 +7,11 @@ import Creator from '../Creator/Creator';
 
 class App extends React.Component {
   state = {
-    lists: [listData] || [],
+    lists: [listData],
   }
 
   static propTypes = {
     lists: PropTypes.array,
-    addList: PropTypes.func,
   }
 
   addList(title) {
@@ -33,14 +32,15 @@ class App extends React.Component {
     }
 
   render() {
-    console.log(this.state);
+    //> console.log(this.state);
+
     return (
       <main className={styles.component}>
         <h1 className={styles.title}>{pageContents.title}</h1>
         <h2 className={styles.subtitle}>{pageContents.subtitle}</h2>
 
-        {this.state.lists.map(({ key, ...listProp }) => (
-          <List key={key} {...listProp} />
+        {this.state.lists.map(({ key, ...singleList }) => (
+          <List key={key} {...singleList} />
         ))}
 
         {/* ////<List {...listData } /> */}

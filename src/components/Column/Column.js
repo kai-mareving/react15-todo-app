@@ -16,7 +16,6 @@ class Column extends React.Component {
     icon: PropTypes.node,
     name: PropTypes.string,
     cards: PropTypes.array,
-    addCard: PropTypes.func,
   }
 
   static defaultProps = {
@@ -51,8 +50,8 @@ class Column extends React.Component {
         </h3>
 
         <div className={styles.cards}>
-          {this.state.cards.map(({key, ...cardProp}) => (
-            <Card key={key} {...cardProp} />
+          {this.state.cards.map(({key, ...singleCard}) => (
+            <Card key={key} {...singleCard} />
           ))}
         </div>
 

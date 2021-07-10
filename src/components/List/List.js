@@ -16,9 +16,8 @@ class List extends React.Component {
     /* static => {object} propTypes cant be accessed as this.propTypes for other instances & is saved as List.propTypes (class property) */
     title: PropTypes.node.isRequired,
     description: PropTypes.node,
-    columns: PropTypes.array,
     image: PropTypes.string,
-    addColumn: PropTypes.func,
+    columns: PropTypes.array,
   }
 
   static defaultProps = {
@@ -46,19 +45,21 @@ class List extends React.Component {
 
       return (
         <section className={styles.component}>
-          <Hero titleText={this.props.title} image={this.props.image} />
+          <Hero title={this.props.title} image={this.props.image} />
           <div className={styles.description}>
             {ReactHtmlParser(this.props.description)}
           </div>
 
           <div className={styles.columns}>
-            {this.state.columns.map(({ key, ...columnProp }) => (
-              <Column key={key} {...columnProp} />
+            {this.state.columns.map(({ key, ...singleColumn }) => (
+              <Column key={key} {...singleColumn} />
             ))}
           </div>
 
           <div className={styles.creator}>
-            <Creator text={settings.columnCreatorText} action={title => this.addColumn(title)}/>
+            <Creator text={settings.columnCreatorText} action={title => this.addColumn(title)} />
+            {/* this so that code knows to work on instance of class */}
+            {/* title => this.addColumn(title) means function functionName(title) { addColumn(title) } */}
           </div>
 
         </section>

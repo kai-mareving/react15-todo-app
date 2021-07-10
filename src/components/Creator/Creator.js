@@ -5,17 +5,18 @@ import PropTypes from 'prop-types';
 import { confirmAlert } from 'react-confirm-alert';
 
 class Creator extends React.Component {
+  state = {
+    value: '',
+    visibleButtons: false,
+  }
+
   static propTypes = {
     text: PropTypes.string,
+    action: PropTypes.func,
   }
 
   static defaultProps = {
     text: 'Add new item',
-  }
-
-  state = {
-    value: '',
-    visibleButtons: false,
   }
 
   handleChange = event => {
