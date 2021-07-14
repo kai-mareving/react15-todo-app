@@ -23,7 +23,7 @@ class Creator extends React.Component {
     // console.log(event);
     this.setState({
       value: event.target.value,
-      visibleButtons: event.target.value.length > 0
+      visibleButtons: event.target.value.length > 0,
     });
   }
 
@@ -32,7 +32,7 @@ class Creator extends React.Component {
       this.props.action(this.state.value);
       this.setState({
         value: '',
-        visibleButtons: false
+        visibleButtons: false,
       });
     }
   }
@@ -43,19 +43,18 @@ class Creator extends React.Component {
         return (
           <div className={styles.confirm}>
             <div>
-            <h1>Are you sure?</h1>
-            <p>You want to delete this file?</p>
-            <Button onClick={onClose} variant="confirm">No</Button>
-            <Button
-              onClick={() => {
+              <h1>Are you sure?</h1>
+              <p>You want to delete this file?</p>
+              <Button onClick={onClose} variant="confirm">No</Button>
+              <Button onClick={() => {
                 this.setState({ value: '', visibleButtons: false });
                 onClose();
               }} variant='danger'>Yes, Delete it!
-            </Button>
+              </Button>
             </div>
           </div>
         );
-      }
+      },
     });
 
     /* if (window.confirm("Do you really want to cancel?")) {

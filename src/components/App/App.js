@@ -24,12 +24,12 @@ class App extends React.Component {
             title,
             description: 'My custom list:',
             image: 'https://i.imgur.com/VHFoGGO.jpg',
-            columns: []
-          }
-        ]
+            columns: [],
+          },
+        ],
       }
-      ));
-    }
+    ));
+  }
 
   render() {
     //> console.log(this.state);
@@ -45,11 +45,11 @@ class App extends React.Component {
 
         {/* ////<List {...listData } /> */}
         <div className={styles.creator}>
-          <Creator text={settings.listCreatorText} action={title => this.addList(title)}/>
+          <Creator text={settings.listCreatorText} action={title => this.addList(title)} />
         </div>
 
       </main>
-    )
+    );
   }
 }
 

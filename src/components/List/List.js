@@ -33,37 +33,37 @@ class List extends React.Component {
             key: state.columns.length ? state.columns[state.columns.length - 1].key + 1 : 0,
             title,
             icon: 'list-alt',
-            cards: []
-          }
-        ]
+            cards: [],
+          },
+        ],
       }
-      ));
-    }
+    ));
+  }
 
-    render() {
-      //> console.log(this.state.columns);
+  render() {
+    //> console.log(this.state.columns);
 
-      return (
-        <section className={styles.component}>
-          <Hero title={this.props.title} image={this.props.image} />
-          <div className={styles.description}>
-            {ReactHtmlParser(this.props.description)}
-          </div>
+    return (
+      <section className={styles.component}>
+        <Hero title={this.props.title} image={this.props.image} />
+        <div className={styles.description}>
+          {ReactHtmlParser(this.props.description)}
+        </div>
 
-          <div className={styles.columns}>
-            {this.state.columns.map(({ key, ...singleColumn }) => (
-              <Column key={key} {...singleColumn} />
-            ))}
-          </div>
+        <div className={styles.columns}>
+          {this.state.columns.map(({ key, ...singleColumn }) => (
+            <Column key={key} {...singleColumn} />
+          ))}
+        </div>
 
-          <div className={styles.creator}>
-            <Creator text={settings.columnCreatorText} action={title => this.addColumn(title)} />
-            {/* this so that code knows to work on instance of class */}
-            {/* title => this.addColumn(title) means function functionName(title) { addColumn(title) } */}
-          </div>
+        <div className={styles.creator}>
+          <Creator text={settings.columnCreatorText} action={title => this.addColumn(title)} />
+          {/* this so that code knows to work on instance of class */}
+          {/* title => this.addColumn(title) means function functionName(title) { addColumn(title) } */}
+        </div>
 
-        </section>
-    )
+      </section>
+    );
   }
 }
 
