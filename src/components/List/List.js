@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import ReactHtmlParser from 'react-html-parser';
 import Hero from '../Hero/Hero';
 import Column from '../Column/ColumnContainer';
-// import Creator from '../Creator/Creator';
+import Creator from '../Creator/Creator';
 
 class List extends React.Component {
   static propTypes = {
@@ -14,30 +14,15 @@ class List extends React.Component {
     description: PropTypes.node,
     image: PropTypes.string,
     columns: PropTypes.array,
+    addColumn: PropTypes.func,
   }
 
   static defaultProps = {
     description: ReactHtmlParser(settings.defaultListDescription),
   }
 
-  /* addColumn(title) {
-    this.setState(state => (
-      {
-        columns: [
-          ...state.columns,
-          {
-            key: state.columns.length ? state.columns[state.columns.length - 1].key + 1 : 0,
-            title,
-            icon: 'list-alt',
-            cards: [],
-          },
-        ],
-      }
-    ));
-  } */
-
   render() {
-    const { title, image, description, columns } = this.props;
+    const { title, image, description, columns, addColumn } = this.props;
     //> console.log('List props:', this.props);
 
     return (
@@ -53,11 +38,9 @@ class List extends React.Component {
           ))}
         </div>
 
-        {/* <div className={styles.creator}> */}
-        {/* <Creator text={settings.columnCreatorText} action={title => this.addColumn(title)} /> */}
-        {/* this so that code knows to work on instance of class */}
-        {/* title => this.addColumn(title) means function functionName(title) { addColumn(title) } */}
-        {/* </div> */}
+        <div className={styles.creator}>
+          <Creator text={ settings.columnCreatorText } action={ title => addColumn(title) } />
+        </div>
 
       </section>
     );
