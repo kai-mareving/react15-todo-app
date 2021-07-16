@@ -1,22 +1,17 @@
 import React from 'react';
 import styles from './App.scss';
-// import { pageContents, settings, listData } from '../../data/dataStore';
 import PropTypes from 'prop-types';
-// import List from '../List/List';
+import List from '../List/ListContainer';
 // import Creator from '../Creator/Creator';
 
 class App extends React.Component {
-  // state = {
-  //   lists: [listData],
-  // }
-
   static propTypes = {
     title: PropTypes.node,
     subtitle: PropTypes.node,
     lists: PropTypes.array,
   }
 
-  addList(title) {
+  /* addList(title) {
     this.setState(state => (
       {
         lists: [
@@ -31,21 +26,21 @@ class App extends React.Component {
         ],
       }
     ));
-  }
+  } */
 
   render() {
-    //> console.log(this.state);
+    const { title, subtitle, lists } = this.props;
+    //> console.log('App props:', this.props);
 
     return (
       <main className={styles.component}>
         <h1 className={styles.title}>{title}</h1>
         <h2 className={styles.subtitle}>{subtitle}</h2>
 
-        {/* {this.state.lists.map(({ key, ...singleList }) => (
-          <List key={key} {...singleList} />
-        ))} */}
+        {lists.map(listData => (
+          <List key={listData.id} {...listData} />
+        ))}
 
-        {/* ////<List {...listData } /> */}
         {/* <div className={styles.creator}>
           <Creator text={settings.listCreatorText} action={title => this.addList(title)} />
         </div> */}

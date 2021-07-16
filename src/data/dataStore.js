@@ -11,7 +11,7 @@ export const settings = {
     defaultText: 'Search...',
     icon: 'search',
   },
-  defaultListDescription: '<p>I can do all the things!!!</p>',
+  defaultListDescription: '<p> Sed et suscipit ante.</p>',
   defaultColumnIcon: 'list-alt',
 };
 
@@ -21,9 +21,10 @@ export const pageContents = {
 };
 
 export const listData = {
-  key: 0,
-  title: 'Things to do <sup>soon!</sup>',
-  description: 'Interesting things that inspire me:',
+  // key: 0,
+  id: 'list-1',
+  title: 'Ex fringilla <sup>lorem!</sup>',
+  description: 'Mauris varius magna sed elementum',
   image: 'https://i.imgur.com/VHFoGGO.jpg',
   columns: [
     {
@@ -77,9 +78,15 @@ export const listData = {
 const lists = [
   {
     id: 'list-1',
-    title: 'Things to do <sup>soon!</sup>',
-    description: 'Interesting things I want to check out!',
-    image: 'http://uploads.kodilla.com/bootcamp/fer/11.react/space.png',
+    title: 'Ex fringilla <sup>lorem!</sup>',
+    description: 'Mauris varius magna sed elementum',
+    image: 'https://i.imgur.com/VHFoGGO.jpg',
+  },
+  {
+    id: 'list-2',
+    title: 'When in doubt, <sup>devour!</sup>',
+    description: 'People who love to eat are always the best people.<br> <sub>- Julia Child</sub>',
+    image: 'https://i.imgur.com/1Ss39Hq.jpg',
   },
 ];
 
@@ -87,26 +94,26 @@ const columns = [
   {
     id: 'column-1',
     listId: 'list-1',
-    title: 'Books',
+    title: 'Books ',
     icon: 'book',
   },
   {
     id: 'column-2',
     listId: 'list-1',
-    title: 'Movies',
+    title: 'Movies ',
     icon: 'film',
   },
   {
     id: 'column-3',
     listId: 'list-1',
-    title: 'Games',
+    title: 'Games ',
     icon: 'gamepad',
   },
   {
     id: 'column-4',
     listId: 'list-2',
-    title: 'Strange column',
-    icon: 'question',
+    title: 'Food favs ',
+    icon: 'utensils',
   },
 ];
 
@@ -140,6 +147,26 @@ const cards = [
     id: 'card-6',
     columnId: 'column-3',
     title: 'Sid Meiers Alpha Centauri',
+  },
+  {
+    id: 'card-7',
+    columnId: 'column-4',
+    title: 'Spaghetti Bolognese',
+  },
+  {
+    id: 'card-8',
+    columnId: 'column-4',
+    title: 'Salami Pizza',
+  },
+  {
+    id: 'card-9',
+    columnId: 'column-4',
+    title: 'Soy Sesame Sauce',
+  },
+  {
+    id: 'card-10',
+    columnId: 'column-4',
+    title: 'Mapo Tofu',
   },
 ];
 
