@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './List.scss';
-import { settings } from '../../data/dataStore';
 import PropTypes from 'prop-types';
+import { settings } from '../../data/dataStore';
 import ReactHtmlParser from 'react-html-parser';
 import Hero from '../Hero/Hero';
 import Column from '../Column/ColumnContainer';
