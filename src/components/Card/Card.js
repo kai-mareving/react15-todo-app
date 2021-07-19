@@ -2,23 +2,20 @@ import React from 'react';
 import styles from './Card.scss';
 import PropTypes from 'prop-types';
 
-class Card extends React.Component {
-  static propTypes = {
-    title: PropTypes.string,
-  }
+const Card = (props) => {
+  //> console.log('Card props:', props);
 
-  render() {
-    const { title } = this.props;
-    //> console.log('Card props:', this.props);
+  return (
+    <section className={styles.component}>
+      <h3 className={styles.title}>
+        {props.title}
+      </h3>
+    </section>
+  );
+};
 
-    return (
-      <section className={styles.component}>
-        <h3 className={styles.title}>
-          {title}
-        </h3>
-      </section>
-    );
-  }
-}
+Card.propTypes = {
+  title: PropTypes.string,
+};
 
 export default Card;
