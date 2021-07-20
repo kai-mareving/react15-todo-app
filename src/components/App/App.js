@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from './App.scss';
 import PropTypes from 'prop-types';
+import { settings } from '../../data/dataStore';
 import List from '../List/ListContainer';
-// import Creator from '../Creator/Creator';
+import Creator from '../Creator/Creator';
 import Search from '../Search/SearchContainer';
 
 class App extends React.Component {
@@ -10,27 +11,11 @@ class App extends React.Component {
     title: PropTypes.node,
     subtitle: PropTypes.node,
     lists: PropTypes.array,
+    addList: PropTypes.func,
   }
 
-  /* addList(title) {
-    this.setState(state => (
-      {
-        lists: [
-          ...state.lists,
-          {
-            key: state.lists.length ? state.lists[state.lists.length - 1].key + 1 : 0,
-            title,
-            description: 'My custom list:',
-            image: 'https://i.imgur.com/VHFoGGO.jpg',
-            columns: [],
-          },
-        ],
-      }
-    ));
-  } */
-
   render() {
-    const { title, subtitle, lists } = this.props;
+    const { title, subtitle, lists, addList } = this.props;
     //> console.log('App props:', this.props);
 
     return (
@@ -43,9 +28,9 @@ class App extends React.Component {
           <List key={listData.id} {...listData} />
         ))}
 
-        {/* <div className={styles.creator}>
-          <Creator text={settings.listCreatorText} action={title => this.addList(title)} />
-        </div> */}
+        <div className={styles.creator}>
+          <Creator text={settings.listCreatorText} action={title => addList(title)} />
+        </div>
 
       </main>
     );
