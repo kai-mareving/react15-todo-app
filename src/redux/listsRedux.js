@@ -17,6 +17,7 @@ export const createActionAddList = payload => ({ payload: { ...payload, id: shor
 export default function reducer(statePart = [], action = {}) {
   switch (action.type) {
     case ADD_LIST:
+      //> console.log(action.payload);
       return [...statePart, action.payload];
     default:
       return statePart;
