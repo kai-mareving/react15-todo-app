@@ -3,6 +3,7 @@ import styles from './App.scss';
 import PropTypes from 'prop-types';
 import { settings } from '../../data/dataStore';
 import List from '../List/ListContainer';
+import Container from '../Container/Container';
 import Creator from '../Creator/Creator';
 import Search from '../Search/SearchContainer';
 
@@ -28,10 +29,11 @@ class App extends React.Component {
           <List key={listData.id} {...listData} />
         ))}
 
-        <div className={styles.creator}>
-          <Creator text={settings.listCreatorText} action={title => addList(title)} />
-        </div>
-
+        <Container>
+          <div className={styles.creator}>
+            <Creator text={settings.listCreatorText} action={title => addList(title)} />
+          </div>
+        </Container>
       </main>
     );
   }
