@@ -3,13 +3,13 @@ import { settings } from '../../data/dataStore';
 import Container from '../Container/Container';
 import Hero from '../Hero/Hero';
 
-const Info = () => {
+const FAQ = () => {
   return (
     <Container>
-      <Hero title={settings.info.title} image={settings.info.image} />
-      <p>{settings.info.text}</p>
+      <Hero title={settings.faq.title} image={settings.faq.image} />
+      <p>{settings.faq.text}</p>
     </Container>
   );
 };
 
-export default Info;
+export default FAQ;
