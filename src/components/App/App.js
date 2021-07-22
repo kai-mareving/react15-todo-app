@@ -1,42 +1,17 @@
 import React from 'react';
-import styles from './App.scss';
-import PropTypes from 'prop-types';
-import { settings } from '../../data/dataStore';
-import List from '../List/ListContainer';
-import Container from '../Container/Container';
-import Creator from '../Creator/Creator';
-import Search from '../Search/SearchContainer';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from '../Home/HomeContainer';
+import Info from '../Info/Info';
 
-class App extends React.Component {
-  static propTypes = {
-    title: PropTypes.node,
-    subtitle: PropTypes.node,
-    lists: PropTypes.array,
-    addList: PropTypes.func,
-  }
-
-  render() {
-    const { title, subtitle, lists, addList } = this.props;
-    //> console.log('App props:', this.props);
-
-    return (
-      <main className={styles.component}>
-        <h1 className={styles.title}>{title}</h1>
-        <h2 className={styles.subtitle}>{subtitle}</h2>
-        <Search />
-
-        {lists.map(listData => (
-          <List key={listData.id} {...listData} />
-        ))}
-
-        <Container>
-          <div className={styles.creator}>
-            <Creator text={settings.listCreatorText} action={title => addList(title)} />
-          </div>
-        </Container>
-      </main>
-    );
-  }
-}
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route exact path='/info' component={Info} />
+      </Switch>
+    </BrowserRouter>
+  );
+};
 
 export default App;
