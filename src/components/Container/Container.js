@@ -3,8 +3,6 @@ import styles from './Container.scss';
 import PropTypes from 'prop-types';
 
 const Container = (props) => {
-  console.log('Container:', props);
-
   return (
     <div className={styles.component}>
       {props.children}
