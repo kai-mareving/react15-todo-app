@@ -10,7 +10,7 @@ export const settings = {
   faq: {
     title: 'FAQ',
     image: 'https://i.imgur.com/W2GAk7e.jpg',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    text: 'Donec tristique mattis nisl. Etiam luctus suscipit dolor, a commodo metus accumsan at. Suspendisse ex nunc, vestibulum ac sapien id, feugiat ultrices metus. Nunc tincidunt nec orci a imperdiet. Duis finibus mollis neque at tempus. Phasellus dictum magna dui, sit amet mattis arcu convallis eget. Proin diam nisl, semper sed suscipit a, euismod sed orci.',
   },
   listCreatorText: 'Add new list',
   columnCreatorText: 'Add new column',
@@ -46,6 +46,18 @@ const lists = [
     title: 'When in doubt, <sup>devour!</sup>',
     description: 'People who love to eat are always the best people.<br> <sub>- Julia Child</sub>',
     image: 'https://i.imgur.com/1Ss39Hq.jpg',
+  },
+  {
+    id: 'list-3',
+    title: 'Dui lacus, tempus.',
+    description: 'In quis semper mi. Sed non dui quis ante commodo commodo nec eget lorem.',
+    image: 'https://i.imgur.com/9QnHu0O.jpg',
+  },
+  {
+    id: 'list-4',
+    title: 'At lectus convallis!',
+    description: 'Amet justo donec enim diam vulputate ut pharetra sit barisle nisi.',
+    image: 'https://i.imgur.com/7nrGAsn.jpg',
   },
 ];
 

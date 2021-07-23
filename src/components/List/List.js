@@ -35,7 +35,6 @@ const List = (props) => {
 };
 
 List.propTypes = {
-  /* static => {object} propTypes cant be accessed as this.propTypes for other instances & is saved as List.propTypes (class property) */
   title: PropTypes.node.isRequired,
   description: PropTypes.node,
   image: PropTypes.string,
