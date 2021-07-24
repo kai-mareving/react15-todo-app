@@ -7,6 +7,7 @@ import Info from '../Info/Info';
 import FAQ from '../FAQ/FAQ';
 import List from '../List/ListContainer';
 import { AnimatedSwitch } from 'react-router-transition';
+import SearchResultsContainer from '../SearchResults/SearchResultsContainer';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Route exact path='/info' component={Info} />
           <Route exact path='/faq' component={FAQ} />
           <Route exact path='/list/:id' component={List} />
+          <Route exact path='/search/:id' component={SearchResultsContainer} />
         </AnimatedSwitch>
       </MainLayout>
     </BrowserRouter>
