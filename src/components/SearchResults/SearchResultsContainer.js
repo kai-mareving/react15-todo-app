@@ -8,6 +8,8 @@ const mapStateToProps = (state, props) => {
   const cardParams = filteredCards[0] || {};
 
   return {
+    value: value,
+    title: 'Results for ' + value,
     ...cardParams,
     cards: getCardsForSearchResults(state, value),
   };
