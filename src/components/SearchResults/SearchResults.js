@@ -7,7 +7,7 @@ import Card from '../Card/Card';
 import Icon from '../Icon/Icon';
 
 const SearchResults = ({value, cards, title, icon}) => {
-  //> console.log('SearchResults props:', {value, title, icon});
+  //> console.log('SearchResults props:', { value, title, icon, cards });
 
   return (
     <Link to={`/search/${value}`} className={styles.link}>
